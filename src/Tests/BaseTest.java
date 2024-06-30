@@ -19,7 +19,7 @@ public class BaseTest {
 
     @BeforeClass
     public static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome-stable");
         ChromeOptions options = new ChromeOptions();
         //  options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
