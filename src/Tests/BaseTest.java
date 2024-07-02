@@ -16,10 +16,11 @@ public class BaseTest {
 
     static GeekFlow geekFlow;
 
-
+//
     @BeforeClass
     public static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome-stable");
+
         ChromeOptions options = new ChromeOptions();
         //  options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
