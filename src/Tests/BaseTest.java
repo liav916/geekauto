@@ -21,7 +21,13 @@ public class BaseTest {
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome-stable");
 
+
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox"); // Si tienes problemas con permisos
+        options.addArguments("--disable-dev-shm-usage"); // Si tienes problemas con memoria compartida
+
+        //ChromeOptions options = new ChromeOptions();
         //  options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
