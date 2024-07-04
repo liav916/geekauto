@@ -19,13 +19,25 @@ public class BaseTest {
 //
     @BeforeClass
     public static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome-stable");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
 
-
+//
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        options.addArguments("--no-sandbox"); // Si tienes problemas con permisos
-        options.addArguments("--disable-dev-shm-usage"); // Si tienes problemas con memoria compartida
+
+
+        options.addArguments("detach=true");
+        options.addArguments("excludeSwitches=enable-automation");
+        options.addArguments("useAutomationExtension=false");
+        options.addArguments("disable-blink-features=AutomationControlled");
+        options.addArguments("disable-extensions");
+        options.addArguments("--no-sandbox");
+        options.addArguments("disable-infobars");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("disable-browser-side-navigation");
+        options.addArguments("disable-gpu");
+
+
 
         //ChromeOptions options = new ChromeOptions();
         //  options.addArguments("--headless");
