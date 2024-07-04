@@ -69,7 +69,7 @@ public class BaseTest {
         driver.switchTo().frame(0);
 
         // Find and click the element
-        driver.findElement(By.cssSelector("//*[@id='challenge-stage']/div/label/input")).click();
+        driver.findElement(By.cssSelector(".main-wrapper .cb-c input[type=\"checkbox\"]")).click();
     }
 
     @AfterClass
